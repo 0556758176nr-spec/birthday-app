@@ -1,20 +1,17 @@
-import { useState } from 'react'
-import heroImg from './assets/hero.png'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import './App.css'
-import ChooseLanguage from './components/ChooseLanguage'
+import ChooseLanguage from "./components/ChooseLanguage";
 import BirthDate from "./components/BirthDate";
+import GreetingsList from "./components/GreetingsList";
 
 function App() {
-  const [count, setCount] = useState(0)
+    const greetings = ["מזל טוב!", "שתהיה שנה מבורכת", "עד מאה ועשרים"];
 
-  return (
-    <>
-     <ChooseLanguage />
-     <BirthDate date={new Date(2015, 10, 20)} />
-    </>
-  )
+    return (
+        <div>
+            <ChooseLanguage />
+            <BirthDate date={new Date(2015, 10, 20)} />
+            <GreetingsList greetings={greetings} />
+        </div>
+    );
 }
 
-export default App
+export default App;
